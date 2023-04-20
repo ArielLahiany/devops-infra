@@ -1,0 +1,23 @@
+name: "Terraform"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+    paths_ignore:
+      - "*.md"
+      - "Makefile"
+
+jobs:
+  terraform:
+    runs-on: "ubuntu-22.04"
+    steps:
+      - id: "checkout"
+        name: "Checkouts the Git repository"
+        uses: "actions/checkout@v2"
+      - id: "terraform"
+        name: "Installs the Terraform package"
+        uses: "hashicorp/setup-terraform@v2"
+        with:
+          terraform_version: "v1.4.5"
