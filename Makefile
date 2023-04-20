@@ -14,3 +14,8 @@ terraform/init:
 .PHONY: terraform/plan
 terraform/plan:
 	terraform -chdir=terraform plan
+
+.PHONY: terraform/validate
+terraform/validate:
+	terraform -chdir=terraform validate
+
