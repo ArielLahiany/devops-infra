@@ -1,8 +1,14 @@
 # JetBrains.
 .idea
 
+# HasiCorp.
+*.lock.hcl
+
 # Source control.
 .git
+
+# Terraform.
+.terraform
 
 # Visual Studio Code.
 .vscode
