@@ -3,7 +3,6 @@ terraform {
   backend "s3" {
     bucket = "ariellahiany-counter-service"
     key    = "workflows/terraform/counter-service/terraform.tfstate"
-    region = "eu-west-1"
   }
   required_providers {
     aws = {
