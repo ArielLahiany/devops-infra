@@ -1,7 +1,6 @@
 # Variables declaration ---------------------------------------------------------------------------------------------  #
-NAMESPACE  = "counter-service"
-SERVICE    = "counter-service"
-VERSION    = `helm show all $(SERVICE) | grep 'appVersion: ' | sed 's/appVersion: //'`
+NAMESPACE = "counter-service"
+SERVICE   = "counter-service"
 
 # Helm --------------------------------------------------------------------------------------------------------------- #
 .PHONY: helm/delete
