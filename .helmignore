@@ -1,0 +1,24 @@
+# Continuous Integration.
+.github
+
+# Environment.
+*.env
+
+# JetBrains.
+.idea
+
+# Make.
+Makefile
+
+# Markdown.
+*.md
+
+# Secure Socket Layer.
+ssl
+
+# Source control.
+.git
+.gitignore
+
+# Visual Studio Code.
+.vscode
