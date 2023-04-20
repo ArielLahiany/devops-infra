@@ -1,24 +1,16 @@
-# Variables declaration ---------------------------------------------------------------------------------------------  #
-NAMESPACE = "counter-service"
-SERVICE   = "counter-service"
+# Terraform ---------------------------------------------------------------------------------------------------------- #
+.PHONY: terraform/apply
+terraform/apply:
+	terraform -chdir=terraform apply
 
-# Helm --------------------------------------------------------------------------------------------------------------- #
-.PHONY: helm/delete
-helm/delete:
-	helm delete $(SERVICE) --namespace $(NAMESPACE)
+.PHONY: terraform/destroy
+terraform/destroy:
+	terraform -chdir=terraform destory
 
-.PHONY: helm/install
-helm/install:
-	helm install $(SERVICE) helm/$(SERVICE) --create-namespace --namespace $(NAMESPACE)
+.PHONY: terraform/init
+terraform/init:
+	terraform -chdir=terraform init
 
-.PHONY: helm/template
-helm/template:
-	helm template helm/$(SERVICE) > /tmp/$(SERVICE).yaml
-
-.PHONY: helm/test
-helm/test:
-	helm install $(SERVICE) helm/$(SERVICE) --create-namespace --namespace $(NAMESPACE) --dry-run --debug
-
-.PHONY: helm/upgrade
-helm/upgrade:
-	helm upgrade $(SERVICE) helm/$(SERVICE) --namespace $(NAMESPACE)
+.PHONY: terraform/plan
+terraform/plan:
+	terraform -chdir=terraform plan
