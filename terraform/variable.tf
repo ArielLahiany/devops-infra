@@ -39,9 +39,3 @@ variable "suffix_length" {
   type        = number
   default     = 8
 }
-
-variable "s3_bucket" {
-  description = "The designated S3 bucket."
-  type = string
-  sensitive = true
-}
