@@ -1,10 +1,10 @@
 terraform {
   required_version = ">=v1.4.5"
-#  backend "s3" {
-#    bucket = var.s3_bucket
-#    key    = ""
-#    region = var.aws_region
-#  }
+  backend "s3" {
+    bucket = var.s3_bucket
+    key    = "workflows/terraform/counter-service/terraform.tfstate"
+    region = var.aws_region
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
