@@ -29,8 +29,9 @@ jobs:
         run: "terraform -chdir=terraform validate"
       - id: "plan"
         name: "Plans the Terraform infrastructure"
-        run: "AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION terraform -chdir=terraform plan -auto-approve -input=false"
+        run: "terraform -chdir=terraform plan -input=false"
+#        run: "AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION terraform -chdir=terraform plan -auto-approve -input=false"
         env:
           AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"
           AWS_SECRET_ACCESS_KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          AWS_DEFAULT_REGION: "${{ env.AWS_DEFAULT_REGION }}"
+#          AWS_DEFAULT_REGION: "${{ env.AWS_DEFAULT_REGION }}"
