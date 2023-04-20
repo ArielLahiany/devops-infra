@@ -8,8 +8,9 @@
 .git
 
 # Terraform.
+*.tfstate
+*.tfstate.*
 .terraform
-.tfstate*.*
 
 # Visual Studio Code.
 .vscode
