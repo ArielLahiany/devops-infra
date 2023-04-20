@@ -21,3 +21,6 @@ jobs:
         uses: "hashicorp/setup-terraform@v2"
         with:
           terraform_version: "v1.4.5"
+      - id: "init"
+        name: "Initializes the Terraform working directory"
+        run: "terraform -chdir=terraform init"
