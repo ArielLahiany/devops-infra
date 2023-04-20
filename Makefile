@@ -5,7 +5,7 @@ terraform/apply:
 
 .PHONY: terraform/destroy
 terraform/destroy:
-	terraform -chdir=terraform destory
+	terraform -chdir=terraform destroy
 
 .PHONY: terraform/init
 terraform/init:
